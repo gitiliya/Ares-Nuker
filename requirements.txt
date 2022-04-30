@@ -1,0 +1,6 @@
+aiohttp==3.6.3
+colorama==0.4.4
+discord.py==1.7.3
+requests
+requests_toolbelt
+pycryptodome
