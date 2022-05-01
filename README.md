@@ -4,9 +4,13 @@ Discord Guild Nuker
 Tested with Python 3.8.9
 
 ## Usage
+CREATE DISCORD BOT - https://discord.com/developers/applications
+
 `pip install -r requirements.txt`
 
-After installing the packages, run
+After installing the packages, change config file
+
+Then jus run it
 
 `main.py`
 
