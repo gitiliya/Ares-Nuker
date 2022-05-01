@@ -6,11 +6,13 @@ Tested with Python 3.8.9
 ## Usage
 CREATE DISCORD BOT - https://discord.com/developers/applications
 
+ENABLE INTENTS IN BOT SETTINGS !!!
+
 `pip install -r requirements.txt`
 
-After installing the packages, change config file
+After installing the packages, change the `config.json` file
 
-Then jus run it
+Then run the main file
 
 `main.py`
 
