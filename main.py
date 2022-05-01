@@ -1,15 +1,7 @@
-import discord
+import discord, asyncio, json, time, sys, aiohttp, requests
 from discord.ext import commands
-import random
 from discord import Permissions
 from colorama import Fore, Style
-import asyncio
-import json
-from threading import Thread
-import time
-import sys
-import aiohttp
-import requests
 from pystyle import Colors, Colorate, Center, Write
 
 with open('config.json') as config_file:
