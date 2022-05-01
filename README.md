@@ -30,5 +30,5 @@ Then jus run it
 `NsfwSpam` - Amount of times you want hentai spammed in all channels
 
 ## Contact
-`iliya#1111`
-`https://discord.gg/fjx5vwae2a`
+iliya#1111
+https://discord.gg/fjx5vwae2a
