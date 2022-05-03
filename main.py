@@ -1,4 +1,4 @@
-import discord, asyncio, json, time, sys, aiohttp, requests
+import discord, asyncio, json, time, sys, aiohttp, requests, random
 from discord.ext import commands
 from discord import Permissions
 from colorama import Fore, Style
