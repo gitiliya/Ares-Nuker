@@ -53,6 +53,7 @@ Then run the main file through command prompt
 `NsfwSpam` - Amount of times you want hentai spammed in all channels
 
 ## Contact
-please don't contact me and spam me for help, do research on google or use trial and error to do sum about it yourself first
+please don't contact me and spam me for help, 
+do research on google or use trial and error to do sum about it yourself first
 iliya#1111
 https://discord.gg/fjx5vwae2a
