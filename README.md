@@ -10,7 +10,34 @@ This doesnt magically nuke guilds, you have to use social engineering to work yo
 Once you have recieved administrator, you have to invite the bot you created and give it the correct permisions.
 Then, the power is in your hands.
 
-## Tutorial For Noobs
+## How to install w/ linux
+I am hoping some of you have basic knowledge as to how linux works.
+
+Also, this is off the top of my head
+
+Clone the repository,
+
+`git clone https://github.com/gitiliya/Aeries-Nuker.git`
+
+CD into it
+
+`cd Aeries-Nuker` < name of directory may be wrong
+
+make sure python3 is installed
+
+`pip install -r requirements.txt`
+
+then, edit the config
+
+`nano config.json`
+
+edit it, CTRL-X to exit and save
+
+now run it
+
+`python3 mainz.py`
+
+## Main Tutorial
 
 I cannot believe I have to address this, please install/clone the repo..
 
