@@ -8,7 +8,6 @@ Tested with Python 3.8.9
 This doesnt magically nuke guilds, you have to use social engineering to work your way up in a guild and earn administrator.
 
 Once you have recieved administrator, you have to invite the bot you created and give it the correct permisions.
-
 Then, the power is in your hands.
 
 ## Tutorial For Noobs
