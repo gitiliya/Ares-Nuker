@@ -3,6 +3,14 @@ Discord Guild Nuker
 
 Tested with Python 3.8.9
 
+## Read Me
+
+This doesnt magically nuke guilds, you have to use social engineering to work your way up in a guild and earn administrator.
+
+Once you have recieved administrator, you have to invite the bot you created and give it the correct permisions.
+
+Then, the power is in your hands.
+
 ## Tutorial For Noobs
 
 I cannot believe I have to address this, please install/clone the repo..
@@ -45,5 +53,6 @@ Then run the main file through command prompt
 `NsfwSpam` - Amount of times you want hentai spammed in all channels
 
 ## Contact
+please don't contact me and spam me for help, do research on google or use trial and error to do sum about it yourself first
 iliya#1111
 https://discord.gg/fjx5vwae2a
