@@ -35,7 +35,7 @@ edit it, CTRL-X to exit and save
 
 now run it
 
-`python3 mainz.py`
+`python3 main.py`
 
 ## Main Tutorial
 
