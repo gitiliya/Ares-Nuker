@@ -23,7 +23,7 @@ CREATE DISCORD BOT - https://discord.com/developers/applications
 
 ENABLE BOTH INTENTS IN BOT SETTINGS !!!
 
-After , change the `config.json` file to your likings, and input your token in 'Token'
+After , change the `config.json` file to your likings, and input your token in `Token`
 
 Then run the main file through command prompt
 
