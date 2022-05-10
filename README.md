@@ -3,16 +3,29 @@ Discord Guild Nuker
 
 Tested with Python 3.8.9
 
-## Usage
-CREATE DISCORD BOT - https://discord.com/developers/applications
+## Tutorial For Noobs
 
-ENABLE INTENTS IN BOT SETTINGS !!!
+I cannot believe I have to address this, please install/clone the repo..
+
+CD into the folder, should be sum along the lines of Main-Aries-Nuker
+
+Please ensure that python is installed
+
+In command prompt, run
 
 `pip install -r requirements.txt`
 
-After installing the packages, change the `config.json` file
+Once complete,
 
-Then run the main file
+CREATE DISCORD BOT - https://discord.com/developers/applications
+
+^ create application, go to bot, create new bot, copy the token
+
+ENABLE BOTH INTENTS IN BOT SETTINGS !!!
+
+After , change the `config.json` file to your likings, and input your token in 'Token'
+
+Then run the main file through command prompt
 
 `main.py`
 
