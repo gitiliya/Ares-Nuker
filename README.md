@@ -41,13 +41,7 @@ now run it
 
 I cannot believe I have to address this, please install/clone the repo..
 
-CD into the folder, should be sum along the lines of Main-Aries-Nuker
-
 Please ensure that python is installed
-
-run the `setup` file
-
-Once complete,
 
 CREATE DISCORD BOT - https://discord.com/developers/applications
 
@@ -57,9 +51,7 @@ ENABLE BOTH INTENTS IN BOT SETTINGS !!!
 
 After , change the `config.json` file to your likings, and input your token in `Token`
 
-Then run the main file through command prompt
-
-`main.py`
+run the `launch` file
 
 ## Config
 `Token` - Bot's token.
