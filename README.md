@@ -45,9 +45,7 @@ CD into the folder, should be sum along the lines of Main-Aries-Nuker
 
 Please ensure that python is installed
 
-In command prompt, run
-
-`pip install -r requirements.txt`
+run the `setup` file
 
 Once complete,
 
