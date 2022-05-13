@@ -27,12 +27,17 @@ client = commands.Bot(command_prefix='.', intents=intents)
 
 clear = lambda: os.system('cls')
 
-def menu():
-    print(Center.XCenter("iliyaa.tk"))
-    print(Center.XCenter(Box.DoubleCube('''[1] Continue To Regular Mode
-    [2] Stealth Nuke''')))
+print(Center.XCenter(Fore.RED + '''
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗  ░█████╗░███████╗██████╗░██╗███████╗░██████╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝  ██╔══██╗██╔════╝██╔══██╗██║██╔════╝██╔════╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░  ███████║█████╗░░██████╔╝██║█████╗░░╚█████╗░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░  ██╔══██║██╔══╝░░██╔══██╗██║██╔══╝░░░╚═══██╗
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░  ██║░░██║███████╗██║░░██║██║███████╗██████╔╝
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░  ╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝╚══════╝╚═════╝░
+                                              iliya#1111''' + Fore.RESET))
+print(Center.XCenter(Box.DoubleCube('''[1] Continue To Regular Mode
+[2] Stealth Nuke''')))
 
-menu()
 option = int(input(Center.XCenter("Option: ")))
 
 while option != 0:
@@ -40,7 +45,7 @@ while option != 0:
         clear()
         @client.event
         async def on_ready():
-            print(Colorate.Vertical(Colors.yellow_to_red, f'''
+            print(Fore.RED + f'''
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗  ░█████╗░███████╗██████╗░██╗███████╗░██████╗
 ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝  ██╔══██╗██╔════╝██╔══██╗██║██╔════╝██╔════╝
 ██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░  ███████║█████╗░░██████╔╝██║█████╗░░╚█████╗░
@@ -55,7 +60,7 @@ Creator's Website -- iliyaa.tk
 .commands
 
 > Regular Mode <
-            ''', 1))
+            ''' + Fore.RESET)
             await client.change_presence(activity=discord.Game(name=ActivityStatus))
 
         @client.command()
