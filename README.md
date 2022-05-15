@@ -1,4 +1,6 @@
-# Aeries-Nuker
+# Ares-Nuker
+`Ares, God of war`
+
 Discord Guild Nuker
 
 Tested with Python 3.8.9
