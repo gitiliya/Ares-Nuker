@@ -68,6 +68,14 @@ run the `launch` file
 
 `NsfwSpam` - Amount of times you want hentai spammed in all channels
 
+`RoleSpamAmount` - Amount of roles you want created
+
+`RoleSpamName` - Name of role you want spammed
+
+`EmojiName` - Name of emoji you want spammed
+
+`EmojiSpamAmount` - Amount of emojis you want created
+
 ## Contact
 please don't contact me and spam me for help, 
 do research on google or use trial and error to do sum about it yourself first
