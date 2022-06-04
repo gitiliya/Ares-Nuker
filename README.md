@@ -5,7 +5,7 @@ Discord Guild Nuker
 
 Tested with Python 3.8.9
 
-![Ares](https://github.com/gitiliya/Ares-Nuker/blob/main/ares.png?raw=true)
+![Ares](https://github.com/gitiliya/Ares-Nuker/blob/main/Ares.png?raw=true)
 
 ## Read Me
 
