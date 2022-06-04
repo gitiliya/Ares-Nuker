@@ -5,6 +5,8 @@ Discord Guild Nuker
 
 Tested with Python 3.8.9
 
+![Ares](https://github.com/gitiliya/Ares-Nuker/blob/main/ares.png?raw=true)
+
 ## Read Me
 
 This doesnt magically nuke guilds, you have to use social engineering to work your way up in a guild and earn administrator.
